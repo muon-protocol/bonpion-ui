@@ -135,11 +135,20 @@ export const Sidebar = () => {
           />
         )}
 
-        <section className="stats w-full flex gap-6 mb-7 mt-auto">
+        <section className="stats w-full flex gap-6 mb-7 mt-auto -ml-2">
           <div className="stats__left flex flex-col gap-3">
-            <StatItem value={stats?.annual_percentage_yield} title="Node APR" />
-            <StatItem value={stats?.pion_staked_in_staking} title="Staked" />
-            <StatItem value={stats?.total_value_locked} title="TVL" />
+            <StatItem
+              value={stats?.annual_percentage_yield}
+              title="Pion NODE APR%"
+            />
+            <StatItem
+              value={stats?.pion_staked_in_staking}
+              title="bonPION LOCKED"
+            />
+            <StatItem
+              value={stats?.total_value_locked}
+              title="Pion Network TVL"
+            />
           </div>
           {isSidebarOpen && (
             <FadeIn duration={0.3} delay={0.1}>
@@ -247,13 +256,15 @@ const StatItem = ({
   title: string;
 }) => {
   return (
-    <div className="stat-item flex flex-col items-center justify-center gap-1">
+    <div className="stat-item flex flex-col text-center items-center justify-center gap-1">
       <span className="w-[76px] h-[60px] rounded-[10px] flex justify-center items-center bg-body-background dark:bg-alice-primary-g2">
         <p className="stat-item__value font-bold text-[18px]">
           {value ? value : '...'}
         </p>
       </span>
-      <p className="text-light-text text-sm">{title}</p>
+      <p className="text-light-text text-sm font-montserrat tracking-[1px]">
+        {title}
+      </p>
     </div>
   );
 };

@@ -339,13 +339,16 @@ const MobileNavbar = () => {
           <div className="stats__left flex gap-7 justify-center">
             <MobileStatItem
               value={stats?.annual_percentage_yield}
-              title="Node APR"
+              title="Pion NODE APR%"
             />
             <MobileStatItem
               value={stats?.pion_staked_in_staking}
-              title="Staked"
+              title="bonPION LOCKED"
             />
-            <MobileStatItem value={stats?.total_value_locked} title="TVL" />
+            <MobileStatItem
+              value={stats?.total_value_locked}
+              title="Pion Network TVL"
+            />
           </div>
           <div className="stats__left flex gap-7 justify-center">
             <MobileStatItem
@@ -409,7 +412,7 @@ const MobileStatItem = ({
           {value ? value : '...'}
         </p>
       </span>
-      <p className="text-light-text dark:text-alice-primary text-sm font-semibold">
+      <p className="text-light-text dark:text-alice-primary text-sm font-semibold font-montserrat">
         {title}
       </p>
     </div>
