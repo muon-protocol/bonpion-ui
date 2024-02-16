@@ -48,7 +48,7 @@ const BonALICEViewCard: FC<{
           <img src={strings.sidebar.nftLogoSrc} className="mr-2" alt="" />{' '}
           Bonded {strings.token} {bonALICE.isNodeBonALICE && '(Active Node)'}
         </p>
-        <p className="text-inherit font-medium font-tomorrow flex gap-1">
+        <p className="text-inherit font-medium font-montserrat flex gap-1">
           <img src={strings.actions.hashtagSrc} alt="" />{' '}
           {bonALICE.tokenId.toString()}
         </p>
