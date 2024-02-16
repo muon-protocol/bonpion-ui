@@ -26,7 +26,9 @@ const Home = () => {
     <div className="w-full page__bg">
       <div className="page page--home page--centered flex flex-col">
         <FadeIn className="mr-auto mb-14" delay={0} duration={0.3}>
-          <p className="text-2xl font-medium font-tomorrow">Getting Started</p>
+          <p className="text-2xl font-medium font-montserrat">
+            Getting Started
+          </p>
         </FadeIn>
         <div className="steps flex flex-col gap-16 md:gap-8 md:flex-row justify-between">
           <StepCard
@@ -35,11 +37,11 @@ const Home = () => {
             animationDelay={0.1}
           >
             <>
-              <p className="font-tomorrow text-[22px] font-medium mb-6">
+              <p className="font-montserrat text-[22px] font-medium mb-6">
                 Buy ${strings.token}
               </p>
 
-              <span className="descriptions font-tomorrow mb-7 leading-[19px] flex flex-col gap-1">
+              <span className="descriptions font-montserrat mb-7 leading-[19px] flex flex-col gap-1">
                 <p>
                   Buy ${strings.token} to create your {strings.nft} and start
                   earning rewards!
@@ -71,12 +73,12 @@ const Home = () => {
             className="w-full md:w-1/3"
             animationDelay={0.2}
           >
-            <p className="font-tomorrow text-[22px] font-medium mb-6">
+            <p className="font-montserrat text-[22px] font-medium mb-6">
               {bonALICEs.length > 0
                 ? 'Manage ' + strings.nft
                 : 'Create ' + strings.nft}
             </p>
-            <span className="descriptions font-tomorrow mb-auto leading-[19px] flex flex-col gap-1">
+            <span className="descriptions font-montserrat mb-auto leading-[19px] flex flex-col gap-1">
               <p>
                 {bonALICEs.length > 0
                   ? `You can add more $${strings.token} and USDC to boost your ${strings.nft} amount and node power`
@@ -127,10 +129,10 @@ const Home = () => {
             className="w-full md:w-1/3"
             animationDelay={0.3}
           >
-            <p className="font-tomorrow text-[22px] font-medium mb-6">
+            <p className="font-montserrat text-[22px] font-medium mb-6">
               {nodeBonALICE.length > 0 ? 'Manage Node' : 'Setup Node'}
             </p>
-            <span className="descriptions font-tomorrow mb-7 leading-[19px] flex flex-col gap-1">
+            <span className="descriptions font-montserrat mb-7 leading-[19px] flex flex-col gap-1">
               <p>
                 {nodeBonALICE.length > 0
                   ? `Go to your dashboard to view details about your node and manage its operation`
@@ -140,7 +142,7 @@ const Home = () => {
             <p className="mb-auto"></p>
             {nodeBonALICE.length > 0 ? (
               <div
-                className="btn !px-6 mx-auto font-tomorrow"
+                className="btn !px-6 mx-auto font-montserrat"
                 onClick={() => window.open('/dashboard/', '_self')}
               >
                 Go to Dashboard

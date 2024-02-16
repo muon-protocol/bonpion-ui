@@ -330,7 +330,7 @@ const ReviewDetail = () => {
     <div className="page__bg">
       <div className="page page--review-details">
         <FadeIn duration={0.3} className="mr-auto mb-11 md:mb-6">
-          <p className="text-2xl font-medium font-tomorrow">Finalize Step</p>
+          <p className="text-2xl font-medium font-montserrat">Finalize Step</p>
         </FadeIn>
 
         <Alert
