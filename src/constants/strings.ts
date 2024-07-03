@@ -6,10 +6,10 @@ const strings = {
     nft: 'bonPION',
     nfts: 'bonPIONs',
     projectSubgraphAddress:
-      'https://api.thegraph.com/subgraphs/name/rastegarishirazu/bondenpion-bnb',
+      'https://api.studio.thegraph.com/query/81515/bonpion-bsc/version/latest',
     // 'https://api.thegraph.com/subgraphs/name/rastegarishirazu/muon-nft-mainnet',
     projectTestnetSubgraphAddress:
-      'https://api.thegraph.com/subgraphs/name/rastegarishirazu/bondedpion-chaple',
+      'https://api.studio.thegraph.com/query/81515/bonpion-test/version/latest',
     footerLogoSrc: '/assets/images/footer/pion-muon-logo.svg',
     navbar: {
       hamburgerSrc: '/assets/images/navbar/pion-hamburger-icon.svg',
@@ -71,9 +71,9 @@ const strings = {
     nft: 'bonALICE',
     nfts: 'bonALICEs',
     projectSubgraphAddress:
-      'https://api.thegraph.com/subgraphs/name/rastegarishirazu/muon-nft',
+      'https://api.studio.thegraph.com/query/62454/muon-nft/version/latest',
     projectTestnetSubgraphAddress:
-      'https://api.thegraph.com/subgraphs/name/rastegarishirazu/muon-nft',
+      'https://api.studio.thegraph.com/query/62454/muon-nft/version/latest',
     footerLogoSrc: '/assets/images/footer/alice-muon-logo.svg',
     navbar: {
       hamburgerSrc: '/assets/images/navbar/alice-hamburger-icon.svg',
