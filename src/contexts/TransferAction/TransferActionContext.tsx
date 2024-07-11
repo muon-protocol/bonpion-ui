@@ -7,7 +7,8 @@ import {
 } from 'react';
 import { BonALICE } from '../../types';
 import useUserProfile from '../UserProfile/useUserProfile.ts';
-// import useTransfer from '../../hooks/useTransfer.ts';
+import useTransfer from '../../hooks/useTransfer.ts';
+import { Address } from 'viem';
 
 const TransferActionContext = createContext<{
   isTransferModalOpen: boolean;
@@ -18,7 +19,8 @@ const TransferActionContext = createContext<{
   selectedTransferBonALICE: BonALICE | null;
   handleTransferAddressChange: (address: string) => void;
   transferAddress: string;
-  // transfer: () => void;
+  transfer: () => void;
+  unselectTransferModalSelectedBonALICE: () => void;
 }>({
   isTransferModalOpen: false,
   openTransferModal: () => {},
@@ -28,7 +30,8 @@ const TransferActionContext = createContext<{
   selectedTransferBonALICE: null,
   handleTransferAddressChange: () => {},
   transferAddress: '',
-  // transfer: () => {},
+  transfer: () => {},
+  unselectTransferModalSelectedBonALICE: () => {},
 });
 
 const TransferActionProvider = ({ children }: { children: ReactNode }) => {
@@ -47,11 +50,11 @@ const TransferActionProvider = ({ children }: { children: ReactNode }) => {
     [],
   );
 
-  // const { transfer } = useTransfer(
-  //   walletAddress,
-  //   transferAddress,
-  //   transferModalSelectedBonALICE?.tokenId,
-  // );
+  const { transfer } = useTransfer(
+    walletAddress,
+    transferAddress as Address,
+    transferModalSelectedBonALICE?.tokenId,
+  );
 
   const changeTransferModalSelectedBonALICE = useCallback(
     (bonALICE: BonALICE) => {
@@ -110,7 +113,8 @@ const TransferActionProvider = ({ children }: { children: ReactNode }) => {
         closeTransferModal,
         isSelectedTransferBonALICE,
         handleTransferModalItemClicked,
-        // transfer,
+        transfer,
+        unselectTransferModalSelectedBonALICE,
       }}
     >
       {children}
