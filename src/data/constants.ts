@@ -144,7 +144,7 @@ export const sidebarItems: SidebarItem[] = [
     hoverIcon: '/assets/images/actions/transfer-colored-icon.svg',
     link: ActionType.TRANSFER,
     grayIcon: '/assets/images/actions/transfer-gray-icon.svg',
-    disabled: true,
+    disabled: false,
   },
 ];
 
