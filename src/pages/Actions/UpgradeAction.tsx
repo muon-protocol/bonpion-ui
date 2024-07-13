@@ -98,7 +98,8 @@ export const RenderUpgradeBody = () => {
           removeItem={(item) => handleUpgradeModalItemClicked(item)}
         >
           <BonALICEModalBody
-            bonALICEs={[...nodeBonALICE, ...bonALICEs]}
+            // bonALICEs={[...nodeBonALICE, ...bonALICEs]}
+            bonALICEs={[...nodeBonALICE]}
             handleUpgradeModalItemClicked={handleUpgradeModalItemClicked}
             isSelectedUpgradeBonALICE={isSelectedUpgradeBonALICE}
           />
